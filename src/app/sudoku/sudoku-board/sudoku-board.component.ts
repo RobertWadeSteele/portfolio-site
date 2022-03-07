@@ -17,8 +17,8 @@ export class SudokuBoardComponent implements OnInit {
 
   ngOnInit(): void {
     this.cells = [];
-    for (let row = 1; row < this.sectionSize; row++) {
-      for (let col = 1; col < this.sectionSize; col++) {
+    for (let row = 1; row <= this.sectionSize; row++) {
+      for (let col = 1; col <= this.sectionSize; col++) {
         let newCell = new SudokuCellComponent();
         newCell.setPosition(row, col);
         this.cells.push(newCell);
