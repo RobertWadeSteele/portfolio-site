@@ -1,0 +1,14 @@
+.cell {
+    display: flex;
+    border-style: solid;
+    border-width: 1px;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}
+
+.cell:hover {
+    background-color: green;
+}

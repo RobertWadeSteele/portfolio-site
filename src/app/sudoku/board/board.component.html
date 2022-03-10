@@ -1,0 +1,8 @@
+<div class="board"
+    [ngStyle]="getStyles()">
+    <app-box
+    *ngFor="let cells of boxes"
+    [cells]="cells"
+    [game]="game"
+    ></app-box>
+</div>

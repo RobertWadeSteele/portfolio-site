@@ -1,16 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SudokuBoardComponent } from './sudoku-board/sudoku-board.component';
 import { SudokuRootComponent } from './sudoku-root/sudoku-root.component';
-import { SudokuCellComponent } from './sudoku-cell/sudoku-cell.component';
+import { CellComponent } from './cell/cell.component';
+import { BoxComponent } from './box/box.component';
+import { BoardComponent } from './board/board.component';
 
 
 
 @NgModule({
   declarations: [
-    SudokuBoardComponent,
     SudokuRootComponent,
-    SudokuCellComponent
+    CellComponent,
+    BoxComponent,
+    BoardComponent
   ],
   imports: [
     CommonModule

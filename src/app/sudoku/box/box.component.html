@@ -1,0 +1,7 @@
+<div class="box"
+    [ngStyle]="getStyles()">
+    <app-cell
+        *ngFor="let cell of cells"
+        [cell]="cell"
+    ></app-cell>
+</div>

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SudokuBoardComponent } from './sudoku-board.component';
+import { CellComponent } from './cell.component';
 
-describe('SudokuBoardComponent', () => {
-  let component: SudokuBoardComponent;
-  let fixture: ComponentFixture<SudokuBoardComponent>;
+describe('CellComponent', () => {
+  let component: CellComponent;
+  let fixture: ComponentFixture<CellComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SudokuBoardComponent ]
+      declarations: [ CellComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SudokuBoardComponent);
+    fixture = TestBed.createComponent(CellComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
