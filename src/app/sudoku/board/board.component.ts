@@ -32,7 +32,7 @@ export class BoardComponent implements OnInit {
     }
   }
 
-  getStyles(): { [klass: string]: any; } | null {
+  getGridDimensions (): { [klass: string]: any; } | null {
     return {
       "grid-template-rows": `repeat(${Math.sqrt(this.game.gameSize)}, 1fr)`,
       "grid-template-columns": `repeat(${Math.sqrt(this.game.gameSize)}, 1fr)`}
