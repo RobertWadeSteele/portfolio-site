@@ -1,8 +1,13 @@
-<div class="board"
+<div 
+    class="board"
     [ngStyle]="getGridDimensions()">
-    <app-box
-        *ngFor="let cells of boxes"
-        [cells]="cells"
-        [game]="game"
-    ></app-box>
+    <div 
+        class="cell-container"
+        *ngFor="let cell of getCells()">
+        <app-cell
+            [boardSize]="game.gameSize"
+            [cell]="cell">
+        </app-cell>
+    </div>
+    
 </div>

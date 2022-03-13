@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Box } from '../Box';
-import { Cell } from '../Cell';
 import { SudokuGame } from '../SudokuGame';
-
+import { Cell } from '../Cell';
 @Component({
   selector: 'app-board',
   templateUrl: './board.component.html',
@@ -11,30 +9,22 @@ import { SudokuGame } from '../SudokuGame';
 export class BoardComponent implements OnInit {
 
   game!: SudokuGame;
-  boxes!: Cell[][];
+  styleTemplate!: { [klass: string]: any; } | null;
 
   constructor() { }
 
   ngOnInit(): void {
     this.game = new SudokuGame();
-    let gridSize = Math.sqrt(this.game.gameSize);
-
-    this.boxes = [];
-
-    for (let row = 0; row < this.game.gameSize; row++) {
-      for (let col = 0; col < this.game.gameSize; col++) {
-        let squareIndex = Math.floor(row / gridSize) * gridSize + Math.floor(col / gridSize);
-        if (this.boxes[squareIndex] == undefined) {
-          this.boxes.push([]);
-        }
-        this.boxes[squareIndex].push(this.game.cells[row][col]);
-      }
-    }
+    this.styleTemplate = {
+      "grid-template-rows": `repeat(${this.game.gameSize}, 1fr)`,
+      "grid-template-columns": `repeat(${this.game.gameSize}, 1fr)`}
   }
 
   getGridDimensions (): { [klass: string]: any; } | null {
-    return {
-      "grid-template-rows": `repeat(${Math.sqrt(this.game.gameSize)}, 1fr)`,
-      "grid-template-columns": `repeat(${Math.sqrt(this.game.gameSize)}, 1fr)`}
+    return this.styleTemplate;
+  }
+
+  getCells(): Cell[] {
+    return this.game.getCells();
   }
 }
