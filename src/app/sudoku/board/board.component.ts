@@ -15,16 +15,28 @@ export class BoardComponent implements OnInit {
 
   ngOnInit(): void {
     this.game = new SudokuGame();
-    this.styleTemplate = {
-      "grid-template-rows": `repeat(${this.game.gameSize}, 1fr)`,
-      "grid-template-columns": `repeat(${this.game.gameSize}, 1fr)`}
   }
-
+  
   getGridDimensions (): { [klass: string]: any; } | null {
-    return this.styleTemplate;
+    return {
+      "grid-template-rows": `repeat(${this.game.gameSize}, 1fr)`,
+      "grid-template-columns": `repeat(${this.game.gameSize}, 1fr)`
+    }
   }
 
   getCells(): Cell[] {
     return this.game.getCells();
+  }
+
+  getCellBorderStyle(cell: Cell): { [klass: string]: any; } | null {
+    let squareSize = Math.sqrt(this.game.getGameSize());
+    let row = cell.getRowIndex(), col = cell.getColumnIndex();
+    return {
+      "border-left": `${col % squareSize == 0 ? "2px" : "1px"}`,
+      "border-right": `${col % squareSize == squareSize - 1 ? "2px" : "1px"}`,
+      "border-top": `${row % squareSize == 0 ? "2px" : "1px"}`,
+      "border-bottom": `${row % squareSize == squareSize - 1 ? "2px" : "1px"}`,
+      "border-style": "solid"
+    }
   }
 }

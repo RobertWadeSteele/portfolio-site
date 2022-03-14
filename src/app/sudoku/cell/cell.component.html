@@ -1,9 +1,5 @@
 <div class="cell"
-    (focus)="onFocusGain()"
-    (blur)="onFocusLost()"
     (keydown)="onNumberInput($event)"
-    pattern="[0-9]*"
-    [ngStyle]="getStyle()"
     tabindex=0>
-    {{cell.value}}
+    {{ cell.value }}
 </div>

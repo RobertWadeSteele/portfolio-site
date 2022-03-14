@@ -10,6 +10,7 @@ import { LandingComponent } from './components/landing/landing.component';
 import { NavLinkComponent } from './components/nav-link/nav-link.component';
 
 import { SudokuModule } from './sudoku/sudoku.module';
+import { ProjectGalleryComponent } from './project-gallery/project-gallery.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { SudokuModule } from './sudoku/sudoku.module';
     AboutComponent,
     LandingComponent,
     NavLinkComponent,
+    ProjectGalleryComponent,
   ],
   imports: [
     BrowserModule,

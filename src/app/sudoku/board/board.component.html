@@ -3,9 +3,9 @@
     [ngStyle]="getGridDimensions()">
     <div 
         class="cell-container"
-        *ngFor="let cell of getCells()">
+        *ngFor="let cell of getCells()"
+        [ngStyle]="getCellBorderStyle(cell)">
         <app-cell
-            [boardSize]="game.gameSize"
             [cell]="cell">
         </app-cell>
     </div>

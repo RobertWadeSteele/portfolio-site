@@ -2,5 +2,7 @@
     border-style: solid;
     border-width: 2px;
     display: grid;
-    box-sizing: border-box;
+    align-self: flex-start;
+    width: 90vmin;
+    height: 90vmin;
 }

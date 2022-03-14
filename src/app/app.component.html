@@ -1,2 +1,4 @@
-<app-landing></app-landing>
-<app-sudoku-root></app-sudoku-root>
+<app-nav-bar></app-nav-bar>
+<app-sudoku-root
+    *ngIf="hasRoute('/portfolio/sudoku')"
+></app-sudoku-root>

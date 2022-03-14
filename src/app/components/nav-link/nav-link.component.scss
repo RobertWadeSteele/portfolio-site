@@ -1,4 +1,9 @@
 a {
+    text-decoration-line: none;
     padding: 5px;
     margin: 5px;
+}
+
+a:visited {
+    color: inherit;
 }
