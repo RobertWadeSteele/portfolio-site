@@ -11,6 +11,8 @@ import { NavLinkComponent } from './components/nav-link/nav-link.component';
 
 import { SudokuModule } from './sudoku/sudoku.module';
 import { ProjectGalleryComponent } from './project-gallery/project-gallery.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { GalleryItemComponent } from './gallery-item/gallery-item.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { ProjectGalleryComponent } from './project-gallery/project-gallery.compo
     LandingComponent,
     NavLinkComponent,
     ProjectGalleryComponent,
+    GalleryComponent,
+    GalleryItemComponent,
   ],
   imports: [
     BrowserModule,

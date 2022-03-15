@@ -1,6 +1,10 @@
 .nav-bar {
     display: flex;
-    background-color: grey;
+    background-color: lightgray;
     align-items: center;
     width: 100%;
+}
+
+.name {
+    padding-right: 10px;
 }

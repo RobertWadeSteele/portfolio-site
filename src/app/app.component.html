@@ -1,4 +1,7 @@
 <app-nav-bar></app-nav-bar>
+<app-gallery
+    *ngIf="hasRoute('/gallery')">
+</app-gallery>
 <app-sudoku-root
-    *ngIf="hasRoute('/portfolio/sudoku')"
+    *ngIf="hasRoute('/gallery/sudoku')"
 ></app-sudoku-root>

@@ -1,9 +1,10 @@
-a {
+a, a:visited {
     text-decoration-line: none;
     padding: 5px;
     margin: 5px;
+    color: black;
 }
 
-a:visited {
-    color: inherit;
+a:hover {
+    color: darkgray;
 }
