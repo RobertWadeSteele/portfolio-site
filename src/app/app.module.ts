@@ -10,9 +10,7 @@ import { LandingComponent } from './components/landing/landing.component';
 import { NavLinkComponent } from './components/nav-link/nav-link.component';
 
 import { SudokuModule } from './sudoku/sudoku.module';
-import { ProjectGalleryComponent } from './components/project-gallery/project-gallery.component';
-import { GalleryComponent } from './components/gallery/gallery.component';
-import { GalleryItemComponent } from './components/gallery-item/gallery-item.component';
+import { GalleryModule } from './gallery/gallery.module';
 
 @NgModule({
   declarations: [
@@ -22,14 +20,12 @@ import { GalleryItemComponent } from './components/gallery-item/gallery-item.com
     AboutComponent,
     LandingComponent,
     NavLinkComponent,
-    ProjectGalleryComponent,
-    GalleryComponent,
-    GalleryItemComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SudokuModule
+    SudokuModule,
+    GalleryModule
   ],
   providers: [],
   bootstrap: [AppComponent]
