@@ -10,9 +10,9 @@ import { LandingComponent } from './components/landing/landing.component';
 import { NavLinkComponent } from './components/nav-link/nav-link.component';
 
 import { SudokuModule } from './sudoku/sudoku.module';
-import { ProjectGalleryComponent } from './project-gallery/project-gallery.component';
-import { GalleryComponent } from './gallery/gallery.component';
-import { GalleryItemComponent } from './gallery-item/gallery-item.component';
+import { ProjectGalleryComponent } from './components/project-gallery/project-gallery.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { GalleryItemComponent } from './components/gallery-item/gallery-item.component';
 
 @NgModule({
   declarations: [

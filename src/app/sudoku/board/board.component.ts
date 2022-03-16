@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { SudokuGame } from '../SudokuGame';
-import { Cell } from '../Cell';
+import { Component, OnInit, Input, HostBinding, ɵɵsetComponentScope } from '@angular/core';
+import { SudokuGame } from '../model/SudokuGame';
+import { Cell } from '../model/Cell';
+
 @Component({
   selector: 'app-board',
   templateUrl: './board.component.html',
@@ -8,35 +9,19 @@ import { Cell } from '../Cell';
 })
 export class BoardComponent implements OnInit {
 
-  game!: SudokuGame;
-  styleTemplate!: { [klass: string]: any; } | null;
+  @Input() game!: SudokuGame;
+
+  @HostBinding('style.grid-template-rows') nRows!: string;
+  @HostBinding('style.grid-template-columns') nCols!: string;
 
   constructor() { }
 
-  ngOnInit(): void {
-    this.game = new SudokuGame();
-  }
-  
-  getGridDimensions (): { [klass: string]: any; } | null {
-    return {
-      "grid-template-rows": `repeat(${this.game.gameSize}, 1fr)`,
-      "grid-template-columns": `repeat(${this.game.gameSize}, 1fr)`
-    }
+  ngOnInit(): void { 
+    this.nRows = `repeat(${this.game.getGameSize()}, 1fr)`;
+    this.nCols = `repeat(${this.game.getGameSize()}, 1fr)`;
   }
 
   getCells(): Cell[] {
     return this.game.getCells();
-  }
-
-  getCellBorderStyle(cell: Cell): { [klass: string]: any; } | null {
-    let squareSize = Math.sqrt(this.game.getGameSize());
-    let row = cell.getRowIndex(), col = cell.getColumnIndex();
-    return {
-      "border-left": `${col % squareSize == 0 ? "2px" : "1px"}`,
-      "border-right": `${col % squareSize == squareSize - 1 ? "2px" : "1px"}`,
-      "border-top": `${row % squareSize == 0 ? "2px" : "1px"}`,
-      "border-bottom": `${row % squareSize == squareSize - 1 ? "2px" : "1px"}`,
-      "border-style": "solid"
-    }
   }
 }

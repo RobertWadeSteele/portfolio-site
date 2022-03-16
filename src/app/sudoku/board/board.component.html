@@ -1,12 +1,6 @@
-<div 
-    class="board"
-    [ngStyle]="getGridDimensions()">
-    <div 
-        class="cell-borders"
-        *ngFor="let cell of getCells()"
-        [ngStyle]="getCellBorderStyle(cell)">
-        <app-cell
-            [cell]="cell">
-        </app-cell>
-    </div>
-</div>
+<app-cell
+    *ngFor="let cell of getCells()"
+    [cell]=cell
+    [gamesize]="this.game.getGameSize()"
+    tabindex=0>
+</app-cell>

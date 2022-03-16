@@ -1,16 +1,12 @@
-.cell {
+:host {
     display: flex;
-    font-size: 275%;
-    // height: 2em;
-    // width: 2em;
-    // font-size: 50%;
-    height: 100%;
-    width: 100%;
+    font-size: 5vmin;
     align-items: center;
     justify-content: center;
     background-color: white;
+    border-style: solid;
 }
 
-.cell:focus {
-    filter: brightness(70%);
+:host:focus {
+    filter: brightness(75%);
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SudokuGame } from '../model/SudokuGame'
 
 @Component({
   selector: 'app-sudoku-root',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SudokuRootComponent implements OnInit {
 
+  game!: SudokuGame;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.game = new SudokuGame()
   }
 
 }
