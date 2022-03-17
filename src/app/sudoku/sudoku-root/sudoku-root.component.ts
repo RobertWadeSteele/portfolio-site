@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Cell } from '../model/Cell';
+import { SudokuBacktracker } from '../model/SudokuBacktracker';
 import { SudokuGame } from '../model/SudokuGame'
 
 @Component({
@@ -13,7 +15,16 @@ export class SudokuRootComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.game = new SudokuGame()
+    this.game = new SudokuGame(undefined, 9);
   }
 
+  backtrackSolve(): void {
+    let backtracker: SudokuBacktracker = new SudokuBacktracker(this.game);
+    backtracker.solve();
+  }
+
+  compareTwoCells(): void {
+    console.log(this.game.getCells()[0] == this.game.getCells()[0]);
+    console.log(this.game.getCells()[0] == this.game.getCells()[1]);
+  }
 }
