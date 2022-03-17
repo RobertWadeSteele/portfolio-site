@@ -22,9 +22,4 @@ export class SudokuRootComponent implements OnInit {
     let backtracker: SudokuBacktracker = new SudokuBacktracker(this.game);
     backtracker.solve();
   }
-
-  compareTwoCells(): void {
-    console.log(this.game.getCells()[0] == this.game.getCells()[0]);
-    console.log(this.game.getCells()[0] == this.game.getCells()[1]);
-  }
 }
