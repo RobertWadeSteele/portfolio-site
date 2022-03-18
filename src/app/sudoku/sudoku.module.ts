@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SudokuRootComponent } from './sudoku-root/sudoku-root.component';
 import { CellComponent } from './cell/cell.component';
 import { BoardComponent } from './board/board.component';
+import { ControlMenuComponent } from './control-menu/control-menu.component';
 
 
 
@@ -10,7 +11,8 @@ import { BoardComponent } from './board/board.component';
   declarations: [
     SudokuRootComponent,
     CellComponent,
-    BoardComponent
+    BoardComponent,
+    ControlMenuComponent
   ],
   imports: [
     CommonModule
